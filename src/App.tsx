@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Heart, Calendar, Gift, ChevronDown } from "lucide-react";
-import { weddingData } from "./data";
+import { weddingData, StoryItem, EventItem, Person } from "./data";
 import "./App.css";
 
 function App() {
@@ -21,9 +21,13 @@ function App() {
     }
   }, []);
 
-  const weddingDate = new Date(weddingData.date.weddingDate);
+  // weddingData is static (imported), so it's safe to memoize once without deps
+  const weddingDate = React.useMemo(
+    () => new Date(weddingData.date.weddingDate),
+    []
+  );
 
-  const calculateTimeLeft = () => {
+  const calculateTimeLeft = useCallback(() => {
     const difference = +weddingDate - +new Date();
     return {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -31,13 +35,13 @@ function App() {
       minutes: Math.floor((difference / 1000 / 60) % 60),
       seconds: Math.floor((difference / 1000) % 60),
     };
-  };
+  }, [weddingDate]);
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   useEffect(() => {
     const timer = setInterval(() => setTimeLeft(calculateTimeLeft()), 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [calculateTimeLeft]);
 
   return (
     <div className="app">
@@ -82,7 +86,7 @@ function App() {
           <section className="story">
             <h2 className="section-title">Kisah Cinta Kami</h2>
             <div className="timeline">
-              {weddingData.story.map((item, index) => (
+              {weddingData.story.map((item: StoryItem, index: number) => (
                 <div className="timeline-item" key={index}>
                   <div className="timeline-dot"></div>
                   <div className="timeline-text">
@@ -98,8 +102,8 @@ function App() {
           <section className="couple">
             <h2 className="section-title">Mempelai</h2>
             <div className="couple-grid">
-              {[weddingData.couple.groom, weddingData.couple.bride].map(
-                (person, i) => (
+              {[weddingData.couple.bride, weddingData.couple.groom].map(
+                (person: Person, i: number) => (
                   <div className="person" key={i}>
                     <div className="photo">
                       <img src={person.photo} alt={person.name} />
@@ -119,7 +123,7 @@ function App() {
           <section className="events">
             <h2 className="section-title">Jadwal Acara</h2>
             <div className="event-grid">
-              {weddingData.events.map((event, i) => (
+              {weddingData.events.map((event: EventItem, i: number) => (
                 <div className="event-card" key={i}>
                   <div className="icon-bg">
                     {event.icon === "calendar" ? (

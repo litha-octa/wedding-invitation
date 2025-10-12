@@ -1,20 +1,60 @@
-export const weddingData = {
+import Bride from "./assets/img/bride.jpeg";
+import Groom from "./assets/img/groom.jpeg";
+
+export interface Person {
+  name: string;
+  parents: {
+    father: string;
+    mother: string;
+  };
+  photo: string;
+}
+
+export interface StoryItem {
+  title: string;
+  date: string;
+  description: string;
+}
+
+export interface EventItem {
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  icon?: string;
+  description?: string;
+}
+
+export interface WeddingData {
+  couple: {
+    groom: Person;
+    bride: Person;
+  };
+  date: {
+    weddingDate: string;
+    displayDate: string;
+  };
+  story: StoryItem[];
+  events: EventItem[];
+}
+
+export const weddingData: WeddingData = {
   couple: {
     groom: {
-      name: "Levi Ackerman",
+      name: "Maulana Ichsan",
       parents: {
-        father: "Bpk. ***",
-        mother: "Ibu. ***",
+        father: "Bpk. Enoh (Alm)",
+        mother: "Ibu. Nilam",
       },
-      photo: "#",
+      photo: Groom,
     },
     bride: {
-      name: "Litha Hopkins",
+      name: "Litha Octa Delistia",
       parents: {
-        father: "Bpk. ***",
-        mother: "Ibu. ***",
+        father: "Bpk. Karso",
+        mother: "Ibu. Senimah",
       },
-      photo: "https://images.unsplash.com/photo-1609241728358-53d49c22c01c?w=500",
+      photo: Bride,
     },
   },
 
@@ -26,15 +66,15 @@ export const weddingData = {
   story: [
     {
       title: "Pertama Bertemu",
-      date: "Januari 2024",
+      date: "2016",
       description:
-        "Kami pertama kali bertemu di sebuah acara kampus dan tidak menyangka bahwa itu akan menjadi awal dari perjalanan panjang kami.",
+        "Kami pertama kali saling mengenal saat duduk di bangku SMK. Saat itu, kami hanya teman sekelas yang berbagi tawa dan cerita tanpa pernah menyangka akan menjadi bagian penting dalam hidup masing-masing.",
     },
     {
       title: "Mulai Menjalin Hubungan",
-      date: "April 2024",
+      date: "2024",
       description:
-        "Setelah beberapa bulan saling mengenal, kami memutuskan untuk menjalin hubungan yang lebih serius.",
+        "Beberapa tahun setelah lulus, takdir mempertemukan kami kembali. Dari pertemuan sederhana itu, rasa yang dulu samar mulai tumbuh kembali — kali ini dengan niat dan perasaan yang lebih matang.",
     },
     {
       title: "Lamaran",
