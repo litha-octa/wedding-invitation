@@ -1,5 +1,11 @@
 import Bride from "./assets/img/bride.jpeg";
 import Groom from "./assets/img/groom.jpeg";
+import Gallery1 from "./assets/img/prewed-1.jpeg";
+import Gallery2 from "./assets/img/prewed-2.jpeg";
+import Gallery3 from "./assets/img/prewed-1.jpeg";
+import Gallery4 from "./assets/img/prewed-2.jpeg";
+import Gallery5 from "./assets/img/bride.jpeg";
+import Gallery6 from "./assets/img/groom.jpeg";
 
 export interface Person {
   name: string;
@@ -25,6 +31,13 @@ export interface EventItem {
   description?: string;
 }
 
+export interface GiftInfo {
+  bankName?: string;
+  accountNumber?: string;
+  accountHolder?: string;
+  address?: string;
+}
+
 export interface WeddingData {
   couple: {
     groom: Person;
@@ -36,6 +49,8 @@ export interface WeddingData {
   };
   story: StoryItem[];
   events: EventItem[];
+  gifts?: GiftInfo;
+  gallery?: string[];
 }
 
 export const weddingData: WeddingData = {
@@ -91,7 +106,8 @@ export const weddingData: WeddingData = {
       time: "08:00 - 10:00 WIB",
       location: "Masjid Agung Bandung",
       icon: "calendar",
-      description: "Dilaksanakan dengan khidmat bersama keluarga dan kerabat terdekat.",
+      description:
+        "Dilaksanakan dengan khidmat bersama keluarga dan kerabat terdekat.",
     },
     {
       title: "Resepsi",
@@ -102,4 +118,13 @@ export const weddingData: WeddingData = {
       description: "Perayaan bahagia bersama teman dan keluarga.",
     },
   ],
+
+  gifts: {
+    bankName: "BCA",
+    accountNumber: "1234567890",
+    accountHolder: "Maulana Ichsan",
+    address: "Jl. Mawar No. 123, Bandung, Jawa Barat",
+  },
+
+  gallery: [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5, Gallery6],
 };
