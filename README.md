@@ -52,3 +52,57 @@ You can easily change the overall look & feel by editing the theme variables.
      --text-color: #333;
      --background-color: #fffaf7;
    }
+
+
+
+# 1️⃣ Clone this repository
+git clone https://github.com/litha-octa/wedding-invitation.git
+
+# 2️⃣ Navigate into the project folder
+cd wedding-invitation
+
+# 3️⃣ Install dependencies
+npm install
+# or
+yarn install
+
+# 4️⃣ Start the development server
+npm run dev
+# or
+yarn dev
+
+# 5️⃣ Open your browser
+# The app usually runs at:
+http://localhost:5173
+
+# To build the project for production:
+npm run build
+
+src/
+ ├── components/
+ │   ├── CoverSection/
+ │   ├── CoupleSection/
+ │   ├── EventSection/
+ │   ├── GallerySection/
+ │   ├── GuestBookSection/
+ │   ├── LocationSection/
+ │   └── FooterSection/
+ ├── assets/
+ │   └── images/
+ ├── App.tsx
+ ├── App.css
+ └── main.tsx
+
+This project is open-source and available for personal or portfolio use.
+You are free to modify, customize, and deploy it as your own wedding website.
+
+License: MIT
+© 2025 Litha Octa
+
+Created and designed with love by Litha Octa
+ 💕
+Deployed with Netlify ☁️
+Built using React + TypeScript ⚛️
+
+“May your code be clean and your wedding full of love.” 💍
+
