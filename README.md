@@ -85,45 +85,44 @@ npm run build
 
 
 # Project Structure
-wedding-invitation/
-├── public/
-│   ├── favicon.ico
-│   └── index.html
-│
-├── src/
-│   ├── assets/
-│   │   └── images/
-│   │
-│   ├── components/
-│   │   ├── CoverSection/
-│   │   │   ├── CoverSection.tsx
-│   │   │   └── CoverSection.css
-│   │   ├── CoupleSection/
-│   │   ├── EventSection/
-│   │   ├── GallerySection/
-│   │   ├── GuestBookSection/
-│   │   ├── LocationSection/
-│   │   └── FooterSection/
-│   │
-│   ├── App.tsx
-│   ├── App.css
-│   └── main.tsx
-│
-├── package.json
-├── tsconfig.json
-└── README.md
+wedding-invitation/<br>
+├── public/<br>
+│   ├── favicon.ico<br>
+│   └── index.html<br>
+│<br>
+├── src/<br>
+│   ├── assets/<br>
+│   │   └── images/<br>
+│   │<br>
+│   ├── components/<br>
+│   │   ├── CoverSection/<br>
+│   │   │   ├── CoverSection.tsx<br>
+│   │   │   └── CoverSection.css<br>
+│   │   ├── CoupleSection/<br>
+│   │   ├── EventSection/<br>
+│   │   ├── GallerySection/<br>
+│   │   ├── GuestBookSection/<br>
+│   │   ├── LocationSection/<br>
+│   │   └── FooterSection/<br>
+│   │<br>
+│   ├── App.tsx<br>
+│   ├── App.css<br>
+│   └── main.tsx<br>
+│<br>
+├── package.json<br>
+├── tsconfig.json<br>
+└── README.md<br>
 
 
-This project is open-source and available for personal or portfolio use.
+#This project is open-source and available for personal or portfolio use.
 You are free to modify, customize, and deploy it as your own wedding website.
 
 License: MIT
 © 2025 Litha Octa
 
-Created and designed with love by Litha Octa
- 💕
-Deployed with Netlify ☁️
-Built using React + TypeScript ⚛️
+# Created and designed with love by Litha Octa 💕
+# Deployed with Netlify ☁️
+# Built using React + TypeScript ⚛️
 
 “May your code be clean and your wedding full of love.” 💍
 
