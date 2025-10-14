@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# 💍 Wedding Invitation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An elegant and responsive digital wedding invitation built with **React + TypeScript**, designed to make your special day beautifully shareable online.  
 
-## Available Scripts
+🌐 **Live Demo:** [https://mywedding-invitation.netlify.app/](https://mywedding-invitation.netlify.app/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features (Component List)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is composed of modular **React components**, each representing a section of the wedding invitation.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+| 🌸 Component | 📝 Description | 💡 Purpose |
+|--------------|----------------|-------------|
+| 💌 **CoverSection** | A stunning full-screen hero with the couple’s names and wedding date. | Creates a strong first impression. |
+| 💑 **CoupleSection** | Introduces the bride and groom with short bios and profile photos. | Highlights the couple’s story. |
+| 📅 **EventSection** | Displays ceremony and reception details with icons for time, date, and location. | Provides guests with essential info. |
+| 📍 **LocationSection** | Embeds a map or venue link (e.g., Google Maps). | Helps guests find the location easily. |
+| 🕊 **GallerySection** | A photo gallery showing prewedding or engagement photos. | Adds a personal, visual touch. |
+| 💬 **GuestBookSection** | Allows guests to leave best wishes or messages. | Engages guests and adds a social element. |
+| 🎁 **GiftSection** | (Optional) Displays digital gift / bank info / QR code. | Simplifies contributions or gifts. |
+| 💖 **FooterSection** | Displays thank-you notes and contact/social links. | Nicely wraps up the page with gratitude. |
 
-### `npm test`
+All sections are **responsive**, **reusable**, and **fully customizable**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠 Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Tool | Purpose |
+|------|----------|
+| ⚛️ **React + TypeScript** | UI development with type safety |
+| 🎨 **CSS** | Styling and theme management |
+| ⚡ **Vite** | Fast dev server and build tool |
+| ☁️ **Netlify** | Deployment and hosting |
+| 🖼 **Icons / Images** | SVG and image-based assets for visuals |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎨 Change Theme
 
-### `npm run eject`
+You can easily change the overall look & feel by editing the theme variables.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Steps
+1. Open **`src/App.css`**
+2. Find the commented `:root` section
+3. Uncomment and customize the variables:
+   ```css
+   :root {
+     --primary-color: #f3c1b0;
+     --secondary-color: #a2746b;
+     --text-color: #333;
+     --background-color: #fffaf7;
+   }
