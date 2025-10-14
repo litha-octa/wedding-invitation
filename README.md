@@ -1,4 +1,9 @@
 # 💍 Wedding Invitation
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://mywedding-invitation.netlify.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
 
 An elegant and responsive digital wedding invitation built with **React + TypeScript**, designed to make your special day beautifully shareable online.  
 
@@ -78,20 +83,36 @@ http://localhost:5173
 # To build the project for production:
 npm run build
 
-src/
- ├── components/
- │   ├── CoverSection/
- │   ├── CoupleSection/
- │   ├── EventSection/
- │   ├── GallerySection/
- │   ├── GuestBookSection/
- │   ├── LocationSection/
- │   └── FooterSection/
- ├── assets/
- │   └── images/
- ├── App.tsx
- ├── App.css
- └── main.tsx
+
+# Project Structure
+wedding-invitation/
+├── public/
+│   ├── favicon.ico
+│   └── index.html
+│
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   │
+│   ├── components/
+│   │   ├── CoverSection/
+│   │   │   ├── CoverSection.tsx
+│   │   │   └── CoverSection.css
+│   │   ├── CoupleSection/
+│   │   ├── EventSection/
+│   │   ├── GallerySection/
+│   │   ├── GuestBookSection/
+│   │   ├── LocationSection/
+│   │   └── FooterSection/
+│   │
+│   ├── App.tsx
+│   ├── App.css
+│   └── main.tsx
+│
+├── package.json
+├── tsconfig.json
+└── README.md
+
 
 This project is open-source and available for personal or portfolio use.
 You are free to modify, customize, and deploy it as your own wedding website.
